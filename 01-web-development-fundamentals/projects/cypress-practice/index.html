@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debugging HTML Forms</title>
+  </head>
+  <body>
+    <form action="/form-handling-url" method="post">
+    <fieldset>
+        <legend>Add user</legend>
+
+        <div>
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" name="first_name">
+        </div>
+
+        <div>
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="last_name">
+        </div>
+
+        <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email_address">
+        </div>
+
+        <div>
+        <label for="role">Role</label>
+        <select id="role" name="user_role_name">
+            <option value="admin">Admin<option>
+            <option value="user">User</option>
+            <option value="guest">Guest</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="expiration">Expiration</label>
+        <input type="date" id="expiration" name="expiration">
+        </div>
+
+        <div id="bio-div">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" rows="3" cols="50"><textarea>
+        </div>
+
+        <div>
+        <button type="submit">Add this person</button>
+        </div>
+        </fieldset>
+      </form>
+  </body>
+</html>
