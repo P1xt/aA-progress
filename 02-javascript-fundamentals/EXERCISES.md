@@ -78,3 +78,58 @@ console.log(hasThreeVowels('bootcamp'));        //  false
 console.log(hasThreeVowels('dog'));             //  false
 console.log(hasThreeVowels('go home'));         //  false
 ```
+
+
+## Longest Name - Debugging
+> The function `longestName()` takes an array of names and returns the longest. If there's a tie, it returns the first name of the longest length. However, this implementation is full of bugs! Use your debugging skills to find and fix those bugs.
+
+```javascript
+function longestName(names) {
+    // Set the first name to be the longest
+    let currentLongest = names[0];
+
+    // Check each other name in the array starting from the second
+    for (let i = 1; i < names.length; i++) {
+
+        // If the name we're checking is longer than our
+        // current longest, set that name to be the new longest
+        if (names[i].length > currentLongest.length) {
+            currentLongest = names[i];
+        }
+
+    }
+
+    return currentLongest;
+}
+
+testNames = ["James", "Patricia", "Michael", "Elizabeth", "Christopher",
+             "Sarah", "Margaret", "Kenneth", "Stephanie", "Jonathan",
+             "Jeremy", "Samantha", "Alexander", "Catherine", "Benjamin"]
+
+console.log(longestName(testNames)); // "Christopher"
+```
+
+## Array Index Of
+> So far you've learned how to write your own loops but there are some methods that will iterate for you. One such method is the Array.indexOf() method. The indexOf() method returns the first index that it finds for the element given, or -1 if the element is not found.
+>
+> Write a function named wordWithinArray(array,word) using Array.indexOf. The function takes in both a word and an array of words as arguments and returns a boolean that returns true if that string is located inside of the array, or false if it does not.
+
+```javascript
+const wordWithinArray = (array, word) => array.indexOf(word) >= 0;
+
+console.log(
+  wordWithinArray(["apple", "banana", "caramel", "chocolate"], "apple")
+); //=> true
+
+console.log(wordWithinArray(
+  ["dog", "cat", "camel", "bird"], "camel")
+); //=> true
+
+console.log(
+  wordWithinArray(["apple", "banana", "caramel", "chocolate"], "pineapple")
+); //=> false
+
+console.log(wordWithinArray(
+  ["dog", "cat", "camel", "bird"], "panther")
+); //=> false
+```
