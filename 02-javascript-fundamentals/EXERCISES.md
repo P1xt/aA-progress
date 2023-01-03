@@ -133,3 +133,80 @@ console.log(wordWithinArray(
   ["dog", "cat", "camel", "bird"], "panther")
 ); //=> false
 ```
+
+## Min Value
+> Write a function minValue(nums) that takes in an array of numbers as an arg. The function should return the smallest number of the array. If the array is empty, the function should return null.
+
+```javascript
+const minValue = nums => {
+    if (nums.length === 0) return null;
+
+    return nums.reduce((r, n) => r < n ? r : n);
+}
+
+console.log(minValue([4, 6, 3, 5, 2, 4])); // 2
+console.log(minValue([-2, -3, -7, 3 ])); // -7
+console.log(minValue([])); // null
+```
+
+## Shortest Word
+> Write a function shortestWord that accepts a sentence as an argument. The function should return the shortest word in the sentence. If there is a tie, return the word that appears later in the sentence.
+
+```javascript
+const shortestWord = sentence =>
+    sentence.split(" ").reduce((s, n) => s.length >= n.length ? n : s);
+```
+
+## Echo Recall
+> Write a function echo that takes in a string and console.logs that string "echo-ized".
+
+```javascript
+const echo = (string) => {
+  console.log(`${string.toUpperCase()} ... ${string} ... ${string.toLowerCase()}`);
+}
+
+echo("Mom!"); // => prints "MOM! ... Mom! ... mom!"
+echo("hey"); // => prints "HEY ... hey ... hey"
+echo("JUMp"); // => prints "JUMP ... JUMp ... jump"
+```
+
+## Vowel Counter Recall
+> Write a function, countVowels(word), that takes in a string word and returns the number of vowels in the word.
+Vowels are the letters "a", "e", "i", "o", "u".
+
+```javascript
+const countVowels = word => word.match(/[aeiou]/gi).length;
+
+console.log(countVowels("bootcamp")); // => 3
+console.log(countVowels("apple")); // => 2
+console.log(countVowels("pizza")); // => 2
+```
+
+## Pig Latin Recall
+> Pig Latin is a fun take on the English language where you move any consonant cluster from the start of the word to the end of the word; when words begin on a vowel, you simply add "-yay". Vowels are "aeiou".
+
+Write a function pigLatinWord that takes in a word string and translates the word into Pig Latin. For this problem use the String.slice() method. The slice() method extracts a section of a string and returns it as a new string, without modifying the original string.
+
+Hint: Remember the String.includes method!
+
+```javascript
+const vowels = "aeiouAEIOU";
+const isVowel = letter => vowels.includes(letter);
+
+const pigLatinWord = word => {
+    if (isVowel(word[0])) {
+        return word + "yay";
+    }
+
+    let i = 0;
+    while (i < word.length && !isVowel(word[i])) {
+        i++;
+    }
+    return word.slice(i) + word.slice(0, i) + "ay";
+}
+
+console.log(pigLatinWord("apple")); //=> "appleyay"
+console.log(pigLatinWord("eat")); //=> "eatyay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("trash")); //=> "ashtray"
+```
