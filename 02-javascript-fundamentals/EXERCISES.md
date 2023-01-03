@@ -157,6 +157,53 @@ const shortestWord = sentence =>
     sentence.split(" ").reduce((s, n) => s.length >= n.length ? n : s);
 ```
 
+## Lucky Numbers
+> Write a function luckyNumbers(matrix) that takes in a 2-dimensional array (matrix) and returns all lucky numbers in any order. A lucky number is the minimum element in its row and the maximum in its column.
+
+```javascript
+const maxColumn = (matrix) => {
+    const result = [];
+
+    for (let i = 0; i < matrix[0].length; i++) {
+        const column = [];
+        for (let j = 0; j < matrix.length; j++) {
+            column.push(matrix[j][i]);
+        }
+        result.push(Math.max(...column));
+    }
+    return result;
+}
+
+const minRow = (matrix) => {
+    const result = [];
+
+    for (let i = 0; i < matrix.length; i++) {
+        const row = [];
+        for (let j = 0; j < matrix[i].length; j++) {
+
+            row.push(matrix[i][j]);
+        }
+        result.push(Math.min(...row));
+    }
+    return result;
+}
+const luckyNumbers = (matrix) => {
+    const min = minRow(matrix);
+    const max = maxColumn(matrix);
+    const lucky = [];
+
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            const curr = matrix[i][j];
+            if (curr === min[i] && curr === max[j]) {
+                lucky.push(curr);
+            }
+        }
+    }
+    return lucky;
+}
+```
+
 ## Echo Recall
 > Write a function echo that takes in a string and console.logs that string "echo-ized".
 
