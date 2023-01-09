@@ -1,0 +1,55 @@
+<!--
+    Requirements:
+
+    Page 2
+
+    --Navigation Bar linking to all 4 pages
+    --HTML form with a minimum of:
+    --    1 fieldset
+    --    3 inputs
+    --       2 text
+    --        1 checkbox
+    --    1 textarea
+    --    Appropriate labels for the above
+    --    1 button
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <section>
+      <div class="nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="focused" href="./contact.html">Contact</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main">
+      <h1>Contact Us</h1>
+    </section>
+    <form action="non" method="post">
+      <fieldset class="contact-form">
+        <label for="first">First Name</label>
+        <input type="text" name="first" id="firstname" />
+        <label for="first">Last Name</label>
+        <input type="text" name="last" id="lastname" />
+        <label for="first">email</label>
+        <input type="text" name="email" id="email" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
