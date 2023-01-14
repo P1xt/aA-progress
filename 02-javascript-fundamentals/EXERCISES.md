@@ -204,6 +204,58 @@ const luckyNumbers = (matrix) => {
 }
 ```
 
+## Spiral Matrix
+> Write a function spiralOrder(matrix) that takes in a 2-dimensional array (matrix) and returns an array containing the elements in spiral order.
+
+```javascript
+function spiralOrder(matrix) {
+	let rows = matrix.length;            // the total number of rows in the matrix
+	let row = 0;                         // the current row to gather
+	let columns = matrix[0].length;	     // the total number of columns in the matrix
+	let column = 0;                      // the current column to gather
+	let resultsPushed = 0;               // the number of results we've gathered thus far
+	let totalResults = rows * columns;   // the total number of results we need to gather
+
+	const result = []; // array to gather the results in as we loop through the matrix
+
+	// while there are still more results to gather
+	while (resultsPushed < totalResults) {
+
+		// get the top row of results
+		for (let i = column; resultsPushed < totalResults && i < columns; i++) {
+			result.push(matrix[row][i]);
+			resultsPushed++;
+		}
+		row++; // shrink the top row we'll start with next time through
+
+		// then get the right column of results
+		for (let i = row; resultsPushed < totalResults && i < rows; i++) {
+			result.push(matrix[i][columns - 1]);
+			resultsPushed++;
+		}
+		columns--; // shrink the right column we'll use next time through
+
+
+		// then get the bottom row of results, in reverse order
+		for (let i = columns - 1; resultsPushed < totalResults && i >= column; i--) {
+			result.push(matrix[rows - 1][i]);
+			resultsPushed++;
+		}
+		rows--; // shrink the bottom row we'll use next time through
+
+		// then get the left column of results, in reverse order
+		for (let i = rows - 1; resultsPushed < totalResults && i >= row; i--) {
+			result.push(matrix[i][column]);
+			resultsPushed++;
+		}
+		column++; // shrink the left column we'll use next time through
+	}
+
+	return result;
+
+}
+```
+
 ## Echo Recall
 > Write a function echo that takes in a string and console.logs that string "echo-ized".
 
