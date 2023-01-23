@@ -31,8 +31,14 @@ console.log(
 // [ 'art', 'app', 'buttery' ]
 *******************************************************************************/
 
-let xorSelect = function() {
-
+let xorSelect = function(arr, first, second) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (first(arr[i]) ^ second(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
 };
 
 

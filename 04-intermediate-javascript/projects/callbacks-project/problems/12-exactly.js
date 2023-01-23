@@ -27,8 +27,14 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(arr, n, callback) {
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i])) {
+            result++;
+        }
+    }
+    return result === n;
 };
 
 
