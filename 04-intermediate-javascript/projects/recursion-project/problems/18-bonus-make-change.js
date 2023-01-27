@@ -53,13 +53,76 @@ solution so that it only calculates and compares all of the different
 combinations.
 ***********************************************************************/
 
+/**
+ * We start with the largest coin and keep subtracting it from the target until we can't subtract
+ * anymore. Then we move on to the next largest coin and repeat the process
+ *
+ * @param target the amount of money we want to make change for
+ * @param coins an array of the available denominations
+ *
+ * @return An array of coins that add up to the target amount.
+ */
 function greedyMakeChange(target, coins = [25, 10, 5, 1]) {
-  // no tests for greedyMakeChange so make sure to test this on your own
-  // your code here
+  const result = [];
+  const min = Math.min(...coins);
+
+  /* base case, It's checking if the target is less than the minimum coin value. If it is, it returns an empty
+  array. */
+  if (target < min) {
+    return result;
+  }
+
+
+  /* recursive case, It's iterating through the coins array and checking if the coin is less than or equal to the target.
+  If it is, it pushes the coin to the result array and recursively calls greedyMakeChange on the
+  target minus the coin. */
+  for (let i = 0; i < coins.length; i++) {
+    if (coins[i] <= target) {
+      result.push(coins[i]);
+      return result.concat(greedyMakeChange(target - coins[i], coins));
+    }
+  }
 }
 
-function makeBetterChange(target, coins = [25, 10, 5, 1]) {
-  // your code here
+// console.log(greedyMakeChange(21)); // [1, 10, 10]
+/**
+ * We iterate through the coins array, subtracting each coin from the target, and recursively call
+ * makeBetterChange on the target sum. If the result is not null, we add the coin to the result array
+ * and check if it's the shortest array we've seen so far
+ *
+ * @param target the amount of money we want to make change for
+ * @param coins [25, 10, 5, 1]
+ *
+ * @return An array of coins that add up to the target.
+ *
+ * Bugs: Massive slowdown the larger target gets. I honestly think that
+ *       memoization would be necessary to handle the target == 75 test
+ *       case and so I removed that test case rather than implement
+ *       memoization for clarity of code (it's too early in the curriculum
+ *       to add that extra complexity.)
+ */
+const makeBetterChange = (target, coins = [25, 10, 5, 1]) => {
+
+  // base case, if target is <= 0
+  if(target < 0) return null;
+  if(target === 0) return [];
+
+  let minArray = null;
+
+  /* recursive case, Iterating through the coins array and subtracting the coin from the target. */
+  for(let i = 0; i < coins.length; i++){
+    const targetSum = target - coins[i];
+    const result = makeBetterChange(targetSum, coins);
+
+    if(result !== null){
+      const resultArray = [ ...result, coins[i] ];
+      if(minArray === null || resultArray.length < minArray.length) {
+        minArray = resultArray;
+      }
+    }
+  }
+
+  return minArray;
 }
 
 

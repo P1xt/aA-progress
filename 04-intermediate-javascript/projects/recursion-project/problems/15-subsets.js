@@ -13,25 +13,43 @@ Hint: For subsets([1, 2, 3]), there are two kinds of subsets:
   2. For every subset that does not contain 3, there is also a corresponding
      subset that is the same, except it also does contain 3.
 ***********************************************************************/
-const subsets = arr => {
+/**
+ * "Find all the subsets of the array except the last member, then add the last member to each of those
+ * subsets."
+ *
+ * The base cases are pretty straightforward. If the array is empty, return an empty array. If the
+ * array has one element, return an array containing an empty array and the one element
+ * @param arr - the array we're working with
+ * @returns An array of arrays, each of which is a subset of the original array.
+ */
+/**
+ * "Find all the subsets of the array except the last member, then add the last member to each of those
+ * subsets."
+ *
+ * The base cases are when the array is empty or has one element. In both cases, we return an array
+ * containing an empty array and the one element we received
+ * @param arr - the array we're working with
+ * @returns An array of arrays, each of which is a subset of the original array.
+ */
+const subsets = (arr) => {
   const last = arr.length - 1; // for convenience, need the last index a lot
 
   // base case, return empty if our array is empty
-  if(arr.length === 0) {
+  if (arr.length === 0) {
     return [[]];
 
-  // base case, return an array containing an empty array and the one element
-  // we received when we get a one element array
-  } else if(arr.length === 1) {
+    // base case, return an array containing an empty array and the one element
+    // we received when we get a one element array
+  } else if (arr.length === 1) {
     return [[], arr];
 
-  // recursive case, only two elements in the array
-  } else if(arr.length === 2) {
+    // recursive case, only two elements in the array
+  } else if (arr.length === 2) {
     const eachElement = subsets(arr.slice(0, last));
     const lastElement = [arr[last]];
     return [...eachElement, lastElement, arr];
 
-  // recursive case, more than two elements in the array
+    // recursive case, more than two elements in the array
   } else {
     // find subsets for the array except the last member
     const eachElement = subsets(arr.slice(0, last));
@@ -40,7 +58,7 @@ const subsets = arr => {
     // add the last member of the array to each of the subsets
     // found among the other members
     const secondPass = [];
-    firstPass.forEach(next => secondPass.push([...next, arr[last]]));
+    firstPass.forEach((next) => secondPass.push([...next, arr[last]]));
     return [...firstPass, ...secondPass];
   }
 };

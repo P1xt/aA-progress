@@ -63,6 +63,12 @@ The call above should return the tree below:
 
 ***********************************************************************/
 
+/**
+ * It takes a list of categories and a currentId, and returns a tree of categories
+ * @param categories - an array of objects, each with an id and parent property
+ * @param currentId - the id of the current category
+ * @returns A tree of categories.
+ */
 const  makeTree = (categories, currentId) => {
   // handle top of the tree
   if (currentId === null) {

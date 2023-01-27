@@ -13,6 +13,10 @@ permutations([1, 2, 3]) // [[1, 2, 3], [1, 3, 2],
 ***********************************************************************/
 
 // your code here
+/**
+ * For each element in the array, concatenate it to the permutations of the rest of the array
+ * @returns An array of arrays.
+ */
 const permutations = array => {
   let result = [];
 
