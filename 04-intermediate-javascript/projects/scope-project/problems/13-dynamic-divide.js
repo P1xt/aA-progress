@@ -18,7 +18,10 @@ divideByFive(50); // returns 10
 
 ***********************************************************************/
 
-// your code here
+/**
+ * DynamicDivide returns a function that divides a number by a divisor.
+ */
+const dynamicDivide = divisor => numerator => numerator / divisor;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -1,6 +1,6 @@
 /***********************************************************************
 Write a function arrowReverseString(str) that accepts a string and returns that string
-reversed. 
+reversed.
 
 Write this function using a fat arrow function!
 
@@ -12,7 +12,11 @@ let result3 = arrowReverseString("potato"); // returns "otatop"
 
 ***********************************************************************/
 
-// your code here!
+/**
+ * Take a string, split it into an array of characters, reverse the order of the array, and join the
+ * array back into a string.
+ */
+const arrowReverseString = str => str.split('').reverse().join('');
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 

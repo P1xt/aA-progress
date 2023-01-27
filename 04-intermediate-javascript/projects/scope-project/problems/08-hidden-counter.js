@@ -15,9 +15,15 @@ hidden2(); // returns 1
 
 ***********************************************************************/
 
-// your code here!
+
+/**
+ * It returns a function that returns a number that increments by one each time it's called.
+ *
+ * @return A function that increments a counter.
+ */
 const hiddenCounter = _ => {
   let count = 0;
+  /* It's returning a function that increments the count variable by one each time it's called. */
   return next = _ => {
     count++;
     return count;

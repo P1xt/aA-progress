@@ -22,7 +22,21 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+/**
+ * It returns a function that returns a string
+ * @returns A function that takes in a list of ingredients and returns a string with the ingredients.
+ */
+const smoothieMachine = _ => {
+  /* Creating an empty array that will be used to store the ingredients. */
+  const ingredients = [];
+
+  /* Returning a function that takes in a list of ingredients and returns a string with the ingredients. */
+  return getIngredient = (...more) => {
+    ingredients.push(...more);
+
+    return `I'm having a smoothie with ${ingredients.join(' and ')}`;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

@@ -17,7 +17,12 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// your code here!
+
+/**
+ * SandwichMaker returns a function that takes an ingredient and adds it to the sandwich
+ *
+ * @return A function
+ */
 function sandwichMaker() {
   let ingredients = "One sandwich with tomato";
 

@@ -10,10 +10,13 @@ arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
-// your code here!
+/**
+ * The arrowAvgValue function takes an array as an argument and returns the average value of the array.
+ */
+const arrowAvgValue = arr => arr.reduce((total, next) => total + next) / arr.length;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-const arrowAvgValue = arr => arr.reduce((total, next) => total + next) / arr.length;
+
 
 try {
   module.exports = arrowAvgValue;

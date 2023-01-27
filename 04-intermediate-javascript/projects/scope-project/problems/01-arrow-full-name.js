@@ -14,7 +14,10 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-// your code here!
+
+/**
+ * Return the firstName and lastName properties of the name object, separated by a space.
+ */
 const arrowGetFullName = name => `${name.firstName} ${name.lastName}`;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

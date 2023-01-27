@@ -15,7 +15,10 @@ let result3 = addFive(37); // returns 42
 
 ***********************************************************************/
 
-// your code here!
+
+/**
+ * AddFive takes a number and returns that number plus five.
+ */
 const addFive = n => n + 5;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

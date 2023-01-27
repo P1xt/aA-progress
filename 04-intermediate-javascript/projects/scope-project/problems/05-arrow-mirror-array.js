@@ -10,7 +10,10 @@ arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
 
-// your code here
+
+/**
+ * Concatenate the array with a reversed copy of itself.
+ */
 const arrowMirrorArray = arr => arr.concat(Array.from(arr).reverse());
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -28,7 +28,13 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
+/**
+ * Return a function that decrements days and returns a message if days is 0.
+ *
+ * @param days the number of days until New Year's Eve
+ *
+ * @return A function that decrements days and checks if days is 0.
+ */
 let countDownTimer = (days) => {
   let message = "Happy New Year!";
 
@@ -38,14 +44,13 @@ let countDownTimer = (days) => {
   }
 
   // return a function to decrement days and check if days is 0
-  return _ => {
-      days--;
-      if (days === 0) {
-        return message;
-      }
-    };
-  }
-
+  return (_) => {
+    days--;
+    if (days === 0) {
+      return message;
+    }
+  };
+};
 
 let threeDays = countDownTimer(3); // returns a function
 console.log(threeDays()); // returns a function

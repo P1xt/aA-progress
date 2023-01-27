@@ -18,7 +18,11 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// your code here!
+/**
+ * DynamicMultiply is a function that takes a first argument and returns a function that takes a second
+ * argument and returns the product of the first and second arguments.
+ */
+const dynamicMultiply = first => second => first * second;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

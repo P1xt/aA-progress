@@ -10,10 +10,16 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 14
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
-// your code here!
+/**
+ * The arrowRestSum function takes in an arbitrary number of parameters, and returns the sum of all of
+ * them.
+ *
+ * @param params The parameters passed to the function.
+ */
+const arrowRestSum = (...params) => params.reduce((total, next) => total + next);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-const arrowRestSum = (...params) => params.reduce((total, next) => total + next);
+
 
 try {
   module.exports = arrowRestSum;

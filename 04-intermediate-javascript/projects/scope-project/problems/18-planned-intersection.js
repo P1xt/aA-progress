@@ -15,7 +15,15 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 *******************************************************************************/
 
-// your code here
+/**
+ * "Given an array, return a function that takes another array and returns the intersection of the two
+ * arrays."
+ *
+ * The first function takes an array and returns a function. The returned function takes an array and
+ * returns the intersection of the two arrays
+ */
+const plannedIntersect = firstArr => secondArr =>
+    firstArr.filter(next => secondArr.includes(next));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 

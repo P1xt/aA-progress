@@ -22,7 +22,11 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// your code here
+/**
+ * LazyAdder is a function that takes a number and returns a function that takes a number and returns a
+ * function that takes a number and returns the sum of the three numbers.
+ */
+const lazyAdder = n1 => n2 => n3 => n1 + n2 + n3;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

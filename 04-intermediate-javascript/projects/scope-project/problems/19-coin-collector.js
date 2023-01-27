@@ -25,7 +25,29 @@ Example 3:
 
 ***********************************************************************/
 
-// your code here
+/**
+ * It returns a function that takes a coin and adds it to a collection until the collection has a
+ * certain number of coins.
+ *
+ * Returns:
+ *   A function that takes in a number and returns an array of numbers.
+ */
+const coinCollector = numCoins => {
+  const collection = [];
+
+/* Returning a function that takes in a number and returns an array of numbers. */
+  return getNextCoin = next => {
+    // only want to add another coin if we don't have enough
+    if (collection.length < numCoins) {
+      collection.push(next);
+    }
+
+    // once we have enough, return the collection
+    if (collection.length >= numCoins) {
+      return collection;
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

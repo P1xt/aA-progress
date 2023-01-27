@@ -42,7 +42,28 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// your code here
+/**
+ * It returns a function that takes an input, pushes that input into an array, and if the array's
+ * length is equal to the count argument, it returns the sum of the array's elements; otherwise, it
+ * returns itself
+ *
+ * Returns:
+ * A function that takes in a number and returns a function that takes in a number and returns a
+ * function that takes in a number and returns a number.
+ */
+const curriedSum = count => {
+  const inputs = [];
+
+  return nextInput = input => {
+    inputs.push(input);
+
+    if (inputs.length === count) {
+      return inputs.reduce((total, next) => total + next);
+    } else {
+      return nextInput;
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

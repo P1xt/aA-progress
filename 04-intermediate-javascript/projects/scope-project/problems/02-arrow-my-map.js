@@ -18,15 +18,21 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
-// your code here!
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+/**
+ * For each element in the array, push the result of calling the callback function on that element into
+ * the result array.
+ *
+ * @param arr an array of any type
+ * @param callback a function that is called on each element of the array
+ *
+ * @return [2, 4, 6, 8, 10]
+ */
 const arrowMyMap = (arr, callback) => {
   const result = [];
   arr.forEach(next => result.push(callback(next)));
   return result;
 }
-
+/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = arrowMyMap;
 } catch (e) {

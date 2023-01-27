@@ -16,7 +16,11 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// your code here!
+
+/**
+ * It takes a word and returns a function that takes a sentence and returns a sentence with the word
+ * inserted between each word.
+ */
 const interrupter = word => sentence => sentence.split(' ').join(` ${word} `);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
