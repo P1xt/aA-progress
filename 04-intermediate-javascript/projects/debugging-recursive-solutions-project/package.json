@@ -1,0 +1,17 @@
+{
+  "name": "debugging-recursive-solutions-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "recursive-debug.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --bail"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
