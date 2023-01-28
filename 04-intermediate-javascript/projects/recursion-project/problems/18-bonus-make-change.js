@@ -112,7 +112,7 @@ const makeBetterChange = (target, coins = [25, 10, 5, 1]) => {
   /* recursive case, Iterating through the coins array and subtracting the coin from the target. */
   for(let i = 0; i < coins.length; i++){
     const targetSum = target - coins[i];
-    const result = makeBetterChange(targetSum, coins);
+    const result = makeBetterChange(targetSum, coins.slice(i)); // only recurse for same or smaller coin
 
     if(result !== null){
       const resultArray = [ ...result, coins[i] ];
