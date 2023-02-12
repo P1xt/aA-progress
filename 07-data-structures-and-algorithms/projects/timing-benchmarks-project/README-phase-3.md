@@ -22,6 +22,6 @@ running the command `node phase-3.js`
 5. Plot the results of `addManyNums10(5000)` in a Google Sheet
 <img src="./chart.png">
 6. Identify the time complexity of both functions
-Complexity of the first O(n), the second O(n^2)
+Complexity of the first O(1), the second O(n)
 7. **BONUS**: Implement `addNums100` and `addManyNums100` and chart the
    performance for better resolution.
