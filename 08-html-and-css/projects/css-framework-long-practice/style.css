@@ -1,0 +1,171 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-background: darkslategrey;
+  --primary-background-hovered: rgb(90, 124, 124);
+  --primary-color: white;
+  --primary-color-hovered: rgb(208, 208, 208);
+  --danger-background: darkred;
+  --danger-background-hovered: rgb(170, 56, 56);
+  --danger-color: white;
+  --info-background: rgb(136, 111, 11);
+  --info-background-hovered: rgb(154, 130, 32);
+  --info-color: white;
+  --accent-background: rgb(29, 117, 117);
+  --accent-background-hovered: rgb(51, 143, 143);
+  --accent-color: white;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  margin: 40px 80px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  background: var(--primary-background);
+  padding: 20px 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin: 10px 20px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color-hovered)
+}
+
+nav .fa-layers {
+  margin-top: 10px;
+}
+
+nav .fa-layers-counter {
+  transform: scale(60%) translate(10px, -10px);
+}
+
+.buttons {
+  margin: 30px 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-link {
+  color: var(--primary-background);
+  border: 3px solid var(--primary-background);
+  background-color: transparent;
+  text-decoration: none;
+  padding: .25rem .75rem;
+}
+
+.btn-link:hover {
+  color: var(--info-background-hovered);
+  border: 3px solid var(--info-background-hovered);
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary-background);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-background-hovered);
+}
+
+.btn-danger {
+  background-color: var(--danger-background);
+  color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-background-hovered);
+}
+
+.btn-info {
+  background-color: var(--info-background);
+  color: var(--info-color);
+}
+
+.btn-info:hover {
+  background-color: var(--info-background-hovered);
+}
+
+.btn-accent {
+  background-color: var(--accent-background);
+  color: var(--accent-color);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-background-hovered);
+}
+
+.card {
+  /* border: 1px solid var(--primary-background); */
+  box-shadow: 3px 2px 8px var(--primary-background);
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.card-img-top {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
+.alert {
+  padding: 30px;
+  margin-bottom: 30px;
+  border: transparent;
+  background-color: var(--primary-background);
+  color: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 3px 2px 8px var(--primary-background);
+  width: fit-content;
+}
+
+form {
+  border-radius: 5px;
+  box-shadow: 3px 2px 8px var(--primary-background);
+  width: fit-content;
+  padding: 30px;
+}
+
+.form-control,
+.form-select,
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check {
+  accent-color: var(--primary-background);
+}
+
+.form-select {
+  margin-top: 5px;
+  height: calc(2.25rem + 2px);
+  width: 100%;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  width: 100%;
+}
