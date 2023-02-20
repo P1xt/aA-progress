@@ -1,0 +1,76 @@
+#root {
+  max-width: 900px;
+  margin: 10px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header a,
+.footer a {
+  text-decoration: none;
+}
+
+.nav__upper {
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0 5px darkslategrey;
+  margin: 20px auto;
+  padding: 10px 0;
+}
+
+.nav__upper,
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upper__right a,
+.footer a {
+  margin-left: 10px;
+}
+
+.get-started {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.get-started:hover {
+  background: darkslategrey;
+  color: white;
+}
+
+.nav__lower {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav__lower a {}
+
+.content {
+  margin: 10px auto;
+  max-width: 70%;
+}
+
+.content h1 {
+  color: darkslategrey;
+}
+
+.main__img {
+  width: 100%;
+}
+
+.grid {
+  width: 70%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid a,
+.grid a:visited {
+  text-decoration: none;
+  color: black;
+  font-size: .9rem;
+}
