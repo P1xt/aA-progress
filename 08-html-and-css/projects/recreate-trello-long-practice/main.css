@@ -1,0 +1,248 @@
+/* Your code here */
+body {
+  font-family: 'Segoe UI',
+    'Roboto',
+    'Noto Sans',
+    'Ubuntu',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.header-nav__container {
+  display: flex;
+  flex-direction: row;
+  background: #026AA7;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 4px;
+  color: white;
+  justify-content: space-between;
+}
+
+.header-nav__group>* {
+  margin: 5px;
+}
+
+#alerts {
+  background-color: #CF513D;
+}
+
+.team__container {
+  background-color: #f4f5f7;
+  padding: 32px;
+}
+
+.team__info {
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+}
+
+.team__info>a {
+  color: #172b4d;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.tabbed-nav__container {
+  background-color: #f4f5f7;
+}
+
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+}
+
+.tabbed-nav__link {
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-bottom: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0 5px;
+  color: #172b4d;
+}
+
+.boards__container {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.boards__sidebar {
+  background-color: #6C547B;
+  border-radius: 3px;
+  margin: 0 32px 32px 0;
+  padding: 0 20px 32px 20px;
+  max-height: 130px;
+  max-width: 180px;
+  width: 20%;
+  flex-basis: 220px;
+}
+
+.boards__sidebar-content .title,
+.boards__sidebar-content a {
+  color: white;
+}
+
+.boards__sidebar-content .description {
+  color: lightblue;
+}
+
+.boards__group {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.boards__board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: hotpink;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 100px;
+  margin: 0 8px 16px;
+  max-width: 250px;
+  padding: 4px 8px;
+  position: relative;
+  color: white;
+  width: 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.board-1 {
+  background-image: url('./board-backgrounds/board-1-background.jpg');
+}
+
+.board-2 {
+  background-image: url('./board-backgrounds/board-2-background.jpg');
+}
+
+.board-3 {
+  background-image: url('./board-backgrounds/board-3-background.jpg');
+}
+
+.board-4 {
+  background-image: url('./board-backgrounds/board-4-background.jpg');
+}
+
+.board-5 {
+  background-image: url('./board-backgrounds/board-5-background.jpg');
+}
+
+.board-6 {
+  background-image: url('./board-backgrounds/board-6-background.jpg');
+}
+
+.board-7 {
+  background-image: url('./board-backgrounds/board-7-background.jpg');
+}
+
+.board-8 {
+  background-image: url('./board-backgrounds/board-8-background.jpg');
+}
+
+.board-9 {
+  background-image: url('./board-backgrounds/board-9-background.jpg');
+}
+
+.board-10 {
+  background-image: url('./board-backgrounds/board-10-background.jpg');
+}
+
+@media screen and (min-width: 750px) and (max-width: 1280px) {
+  .boards__board {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  /* Hide the header search input field. */
+  #search {
+    display: none;
+  }
+
+  /* Hide the "Boards" text, but leave the boards icon. */
+  .boards-label {
+    display: none;
+  }
+
+  .boards__board {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .tabbed-nav__group,
+  .tabbed-nav__link {
+    display: block;
+  }
+}
+
+/* Supplied CSS follows. */
+.header-nav__group {
+  display: flex;
+}
+
+.header-nav__button {
+  display: inline-flex;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, .3);
+  box-shadow: none;
+  color: #fff;
+  line-height: 32px;
+  margin: 0 4px 0 0;
+  transition: .1s ease;
+  white-space: nowrap;
+  padding: 8px;
+  height: 20px;
+}
+
+.header-nav__button#search>input {
+  border-style: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.header-nav__button>.boards-label {
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.header-nav__trello-logo {
+  opacity: 0.5;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 5px;
+}
+
+.header-nav__button>i {
+  width: 24px;
+}
