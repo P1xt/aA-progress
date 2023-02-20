@@ -1,0 +1,46 @@
+h1 {
+  font-size: 1.8rem;
+  font-family: 'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  padding: 1rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-decoration: solid;
+  color: black;
+  background-color: white;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 1rem;
+  margin: 1.2rem 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+}
+
+p {
+  font-family: 'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin: 1rem;
+  color: darkslategrey;
+  background-color: white;
+}
+
+.logo {
+  background-size: cover;
+  background-image: url('https://appacademy.github.io/styleguide/assets/logo/logo-emblem-black-1000.png');
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  margin: 0 2rem;
+}
